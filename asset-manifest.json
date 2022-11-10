@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/StreamFlix/static/css/main.4ea22f65.css",
-    "main.js": "/StreamFlix/static/js/main.133dd5fa.js",
+    "main.js": "/StreamFlix/static/js/main.2b1feb6c.js",
     "index.html": "/StreamFlix/index.html",
     "main.4ea22f65.css.map": "/StreamFlix/static/css/main.4ea22f65.css.map",
-    "main.133dd5fa.js.map": "/StreamFlix/static/js/main.133dd5fa.js.map"
+    "main.2b1feb6c.js.map": "/StreamFlix/static/js/main.2b1feb6c.js.map"
   },
   "entrypoints": [
     "static/css/main.4ea22f65.css",
-    "static/js/main.133dd5fa.js"
+    "static/js/main.2b1feb6c.js"
   ]
 }
