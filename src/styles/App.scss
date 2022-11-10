@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&family=Jost:wght@300;400;500;700;800&display=swap');
+
+// Colours
+$black-bg: #181922;
+$red: #BD1717;
+$white: #FFFFFF;
+$green: #00EF26;
+$transparent: rgba(0, 0, 0, .61);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Jost;
+    color: $white;
+}
+
+body{
+    background-color: $black-bg;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+}
+
+.carousel-container{
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    .carousel-image{
+        height: 500px;
+        width: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .details{
+        width: 50vw;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: $transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 3em;
+        padding-top: 2em;
+        strong{
+            font-family: "Arima Madurai";
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: $red;
+        }
+        .heading{
+            margin-top: 1.5em;
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            li{ 
+                padding-top: 1em;
+                padding-right: 3em;
+                font-size: 1rem;
+            }
+            .like{
+                color: $green;
+            }
+        }
+        .desc{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; 
+            padding-top: 2.5em;
+            font-size: 1rem;
+            width: 80%;
+            b{
+                margin-bottom: .7em;
+                font-size: 1.25rem;
+                font-weight: 800;
+                color: #d4b6b6;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em;
+    .repeat{
+        font-family: "Arima Madurai";
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: $red;
+    }
+    .searchbar{
+        display: flex;
+        background-color: #111217;
+        padding-left: 1.5em;
+        border-radius: 20px 20px 20px 0px;
+        width: 500px;
+        height: 35px;
+        input{
+            background-color: transparent;
+            font-size: 1rem;
+            font-weight: 300;
+            width: 450px;
+            height: 35px;
+            border: none;
+            outline: none;
+        }
+        .search-btn{
+            width: 50px;
+            height: 35px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+.container{
+    padding-bottom: 7em;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 6fr 6fr 6fr 6fr;
+    grid-row-gap: 5em;
+    .not-found{
+        width: 100vw;
+        padding-top: 3em;
+        text-align: center;
+        color: #e9e0e023;
+    }
+    .card{
+        width: 200px;
+        height: 280px;
+        cursor: pointer;
+        &:hover{
+            .card-details{
+                opacity: 1;
+                transition: opacity .5s linear;
+            }
+        }
+        .card-img{
+            width: 200px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 20px 0px 20px 0px;
+            cursor: pointer;
+        }
+        .card-details{
+            background-color: #222530;
+            text-align: center;
+            font-size: .8rem;
+            border-radius: 0px 0px 20px 0px;
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px){
+    .carousel-container{ 
+        height: 580px;
+        .carousel-image{
+            height: 580px;
+            width: 80%;
+            object-fit: cover;
+        }
+        .details{
+            height: 580px;
+        }
+    }
+    .container{
+        grid-template-columns: 6fr 6fr 6fr;
+        grid-row-gap: 5em;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    body{
+        .logo{
+            display: block;
+            position: aboslute;
+            top: 0em;
+            left: 0em;
+            padding: 1.3em 1em;
+            color: $red;
+            font-size: 1.5rem;
+            font-family: "Arima Madurai";
+        }
+    }
+
+    .carousel-container{
+        .carousel-image{
+            width: 100vw;
+            height: auto;
+            object-fit: cover;
+            margin-top: 6em;
+        }
+        .details{
+            width: 100vw;
+            height: auto;
+            transform: translateY(80%);
+            padding-top: 0;
+            padding-bottom: 2em;
+            padding-left: 1.5em;
+            strong{
+                display: none;
+            }
+            .heading{
+                margin-top: 1em;
+                font-size: 2rem;
+            }
+            ul li{
+                font-size: .9rem;
+                font-weight: 500;
+                padding-top: .5em;
+            }
+            .desc{
+                font-size: .9rem;
+                font-weight: 300;
+                width: 90%;
+                padding-top: 2.5em;
+                b{
+                    margin-bottom: .3em;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .header{
+        flex-direction: column;
+        padding: 0;
+        transform: translateY(-40%);
+        .repeat{
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .searchbar{
+            width: 300px;
+            height: 35px;
+            input{
+                width: 320px;
+                height: 35px;
+            }
+            .search-btn{
+                background-color: transparent;
+                svg{
+                    width: 20px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .container{
+        grid-template-columns: 6fr;
+    }
+
+}
