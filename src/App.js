@@ -4,7 +4,7 @@ import Carousel from './Carousel';
 import MovieCard from './MovieCard';
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=5146b061';
+const API_URL = 'http://www.omdbapi.com?apikey=';
 
 const App = () => {
 
